@@ -1,13 +1,10 @@
 @extends('layouts.app')
-
-
  @section('content')
   <!-- overlay nav -->
   <div data-overlay
     class="fixed bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm inset-0 z-50 lg:hidden invisible opacity-0 transition-all ease-linear duration-300">
   </div>
   <!-- overlay nav -->
-
   <section class="relative pt-8 md:pt-12 lg:pt-16 overflow-hidden">
     <div
       class="absolute w-2/5 aspect-video rounded-full skew-x-12 bg-gradient-to-tl from-blue-700 via-purple-500 to-indigo-700 lg:top-1/2 lg:-left-5 opacity-40 blur-3xl">
@@ -726,6 +723,4 @@
       </div>
     </div>
   </section>
-
-
 @endsection()

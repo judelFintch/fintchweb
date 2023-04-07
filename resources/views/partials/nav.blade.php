@@ -1,7 +1,6 @@
 <header class="sticky top-0 inset-x-0 py-2 lg:py-0.5 z-60 bg-white border-b border-b-gray-100">
     <div class="w-full relative mx-auto md:max-w-5xl lg:max-w-7xl px-5 sm:px-10 md:px-12 lg:px-4 xl:px-1">
       <nav class="flex justify-between items-center gap-4 py-3">
-
         <!-- logo -->
         <div class="min-w-max">
           <a href="index.html" class="flex items-center gap-2 font-semibold text-gray-600 text-lg">
@@ -22,19 +21,19 @@
             lg:gap-10 lg:items-center lg:text-lg lg:w-full lg:justify-end">
           <ul class="flex flex-col lg:flex-row gap-3 lg:gap-5 lg:items-center text-gray-700 font-medium">
             <li>
-              <a href="index.html" class="duration-300 ease-linear hover:text-blue-600">Accueil</a>
+              <a href="/" class="duration-300 ease-linear hover:text-blue-600">Accueil</a>
             </li>
 
             <li>
-              <a href="pages/portfolio.html" class="duration-300 ease-linear hover:text-blue-600">Portfolio</a>
+              <a href="#" class="duration-300 ease-linear hover:text-blue-600">Portfolio</a>
             </li>
 
             <li>
-              <a href="pages/about.html" class="duration-300 ease-linear hover:text-blue-600">A propos</a>
+              <a href="#" class="duration-300 ease-linear hover:text-blue-600">A propos</a>
             </li>
 
             <li>
-              <a href="pages/about.html#faq" class="duration-300 ease-linear hover:text-blue-600">F.A.Q</a>
+              <a href="#" class="duration-300 ease-linear hover:text-blue-600">F.A.Q</a>
             </li>
           </ul>
           <div class="flex w-full sm:w-max">
@@ -47,7 +46,7 @@
           </div>
         </div>
         <div class="gap-2 flex min-w-max w-max">
-          <a href="#" class="p-2.5 lg:p-4 rounded-full border border-green-600 text-green-600">
+          <a href="https://call.whatsapp.com/voice/wFeqG3KGDt4jpN1yFe8zPG" class="p-2.5 lg:p-4 rounded-full border border-green-600 text-green-600">
             <span class="sr-only">call whatsap</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class=""
               viewBox="0 0 16 16">
