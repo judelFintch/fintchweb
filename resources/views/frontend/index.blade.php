@@ -19,8 +19,8 @@
           Trouvez la <span class="gradient-span">meilleure</span> solution pour votre business
         </h1>
         <p class="md:text-lg mt-8 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem nisi sint quibusdam minus
-          quasi consectetur, earum, consequatur quia architecto tempore
+        Nous proposons une gamme complète de services pour répondre à tous vos besoins en matière de site web, notamment la conception et le développement de sites web personnalisés, le web design, l'hébergement, la maintenance et le support technique. Nous offrons également des services de développement de logiciels et d'applications web sur mesure, ainsi que des solutions d'intégration de système de gestion de contenu (CMS)
+        
         </p>
         <div class="flex mt-8">
           <a href="./pages/contact.html"
@@ -79,7 +79,8 @@
           Nous sommes la pour repondre a vos demandes
         </h1>
         <p class="md:text-lg mt-8 text-gray-600 font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem
+        Notre priorité absolue chez Fintchweb est de répondre aux besoins de nos clients et de leur offrir les meilleurs services possibles pour les aider à atteindre leurs objectifs en ligne.
+        Voici un aperçu des services que nous proposons:
         </p>
       </div>
       <div
@@ -96,7 +97,7 @@
               Web design
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem maxime delectus
+            Nous créons des designs de haute qualité et professionnels pour les sites web de nos clients. Nos designers sont experts en UX/UI design et en web design et peuvent créer des designs personnalisés qui correspondent aux objectifs de nos clients
             </p>
           </div>
         </div>
@@ -130,9 +131,14 @@
               Web Developpement
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem maxime delectus
+            Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins spécifiques et leur offrir des solutions personnalisées pour leurs projets web. Nous nous assurons que le site web est à la fois fonctionnel et esthétiquement attrayant pour offrir une expérience utilisateur optimale.
             </p>
           </div>
+
+          
+
+
+          
         </div>
 
         <div
