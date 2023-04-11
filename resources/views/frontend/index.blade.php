@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Fintch Web')
  @section('content')
   <!-- overlay nav -->
   <div data-overlay
@@ -45,23 +46,23 @@
       <div
         class="w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-8 sm:gap-8 md:gap-6 lg:gap-12 rounded-3xl bg-white shadow-lg border-2 border-gray-100 shadow-gray-100/50 p-5 sm:p-8 lg:p-10 ">
         <div class="text-center">
-          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">12+</h2>
-          <p class="mt-1 md:mt-2.5 text-gray-600">Projects achieved</p>
+          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">956+ k</h2>
+          <p class="mt-1 md:mt-2.5 text-gray-600">Lines de Codes </p>
         </div>
 
         <div class="text-center">
-          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">12+</h2>
-          <p class="mt-1 md:mt-2.5 text-gray-600">Projects achieved</p>
+          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">65 +</h2>
+          <p class="mt-1 md:mt-2.5 text-gray-600">Projets Livres</p>
         </div>
 
         <div class="text-center">
-          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">12+</h2>
-          <p class="mt-1 md:mt-2.5 text-gray-600">Projects achieved</p>
+          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">50 +</h2>
+          <p class="mt-1 md:mt-2.5 text-gray-600">Clients</p>
         </div>
 
         <div class="text-center">
-          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950">12+</h2>
-          <p class="mt-1 md:mt-2.5 text-gray-600">Projects achieved</p>
+          <h2 class="font-semibold text-2xl md:text-4xl text-teal-950"> 40 +</h2>
+          <p class="mt-1 md:mt-2.5 text-gray-600">Site internet</p>
         </div>
       </div>
     </div>
@@ -79,8 +80,7 @@
           Nous sommes la pour repondre a vos demandes
         </h1>
         <p class="md:text-lg mt-8 text-gray-600 font-medium">
-        Notre priorité absolue chez Fintchweb est de répondre aux besoins de nos clients et de leur offrir les meilleurs services possibles pour les aider à atteindre leurs objectifs en ligne.
-        Voici un aperçu des services que nous proposons:
+        
         </p>
       </div>
       <div
@@ -97,7 +97,41 @@
               Web design
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-            Nous créons des designs de haute qualité et professionnels pour les sites web de nos clients. Nos designers sont experts en UX/UI design et en web design et peuvent créer des designs personnalisés qui correspondent aux objectifs de nos clients
+            
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-xl h-auto flex flex-col group p-6 md:p-8 lg:p-8 transition-all bg-white shadow-lg border-2 border-gray-100 shadow-gray-100/50 group hover:shadow-xl hover:border-transparent ease-linear">
+          <div class="flex justify-center min-h-max">
+            <div class="w-auto">
+              <img src="images/icons/sales.svg" alt="icon" width="20" height="auto" class="w-auto h-14">
+            </div>
+          </div>
+          <div class="space-y-5 mt-6 text-center">
+            <h2 class="font-semibold text-gray-800 text-xl relative">
+              Conception des logiciels
+            </h2>
+            <p class="text-gray-600 md:text-lg font-medium">
+            
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-xl h-auto flex flex-col group p-6 md:p-8 lg:p-8 transition-all bg-white shadow-lg border-2 border-gray-100 shadow-gray-100/50 group hover:shadow-xl hover:border-transparent ease-linear">
+          <div class="flex justify-center min-h-max">
+            <div class="w-auto">
+              <img src="images/icons/sales.svg" alt="icon" width="20" height="auto" class="w-auto h-14">
+            </div>
+          </div>
+          <div class="space-y-5 mt-6 text-center">
+            <h2 class="font-semibold text-gray-800 text-xl relative">
+              Hebergement web
+            </h2>
+            <p class="text-gray-600 md:text-lg font-medium">
+              
             </p>
           </div>
         </div>
@@ -114,7 +148,25 @@
               Digital Marketing
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem maxime delectus
+              
+            </p>
+          </div>
+        </div>
+
+
+        <div
+          class="rounded-xl h-auto flex flex-col group p-6 md:p-8 lg:p-8 transition-all bg-white shadow-lg border-2 border-gray-100 shadow-gray-100/50 group hover:shadow-xl hover:border-transparent ease-linear">
+          <div class="flex justify-center min-h-max">
+            <div class="w-auto">
+              <img src="images/icons/sales.svg" alt="icon" width="20" height="auto" class="w-auto h-14">
+            </div>
+          </div>
+          <div class="space-y-5 mt-6 text-center">
+            <h2 class="font-semibold text-gray-800 text-xl relative">
+              Digital Marketing
+            </h2>
+            <p class="text-gray-600 md:text-lg font-medium">
+              
             </p>
           </div>
         </div>
@@ -131,7 +183,7 @@
               Web Developpement
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-            Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins spécifiques et leur offrir des solutions personnalisées pour leurs projets web. Nous nous assurons que le site web est à la fois fonctionnel et esthétiquement attrayant pour offrir une expérience utilisateur optimale.
+            
             </p>
           </div>
 
@@ -153,7 +205,7 @@
               SEO Consultancy
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem maxime delectus
+              
             </p>
           </div>
         </div>
