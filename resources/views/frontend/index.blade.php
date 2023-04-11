@@ -77,7 +77,7 @@
       <div class="max-w-3xl space-y-3">
         <span class="text-blue-600 font-semibold">Nos services</span>
         <h1 class="mt-0.5 font-semibold text-gray-800 text-3xl md:text-4xl">
-          Nous sommes la pour repondre a vos demandes
+        Fintchweb offres une gamme complète de services de développement web et informatique pour répondre à tous vos besoins en ligne. Voici un aperçu de nos services
         </h1>
         <p class="md:text-lg mt-8 text-gray-600 font-medium">
         
@@ -145,7 +145,7 @@
           </div>
           <div class="space-y-5 mt-6 text-center">
             <h2 class="font-semibold text-gray-800 text-xl relative">
-              Digital Marketing
+               Marketing Digital
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
               
@@ -163,8 +163,23 @@
           </div>
           <div class="space-y-5 mt-6 text-center">
             <h2 class="font-semibold text-gray-800 text-xl relative">
-              Digital Marketing
-            </h2>
+            Création de contenu
+            <p class="text-gray-600 md:text-lg font-medium">
+              
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-xl h-auto flex flex-col group p-6 md:p-8 lg:p-8 transition-all bg-white shadow-lg border-2 border-gray-100 shadow-gray-100/50 group hover:shadow-xl hover:border-transparent ease-linear">
+          <div class="flex justify-center min-h-max">
+            <div class="w-auto">
+              <img src="images/icons/sales.svg" alt="icon" width="20" height="auto" class="w-auto h-14">
+            </div>
+          </div>
+          <div class="space-y-5 mt-6 text-center">
+            <h2 class="font-semibold text-gray-800 text-xl relative">
+            Consulting informatique
             <p class="text-gray-600 md:text-lg font-medium">
               
             </p>
@@ -180,7 +195,7 @@
           </div>
           <div class="space-y-5 mt-6 text-center">
             <h2 class="font-semibold text-gray-800 text-xl">
-              Web Developpement
+            Maintenance de sites web
             </h2>
             <p class="text-gray-600 md:text-lg font-medium">
             
@@ -220,10 +235,13 @@
     </div>
     <div class="mx-auto md:max-w-5xl lg:max-w-7xl px-5 sm:px-10 md:px-12 lg:px-4 xl:px-1 relative">
       <div class="max-w-3xl space-y-3">
-        <span class="text-blue-600 font-semibold">Technologies</span>
-        <h1 class="mt-0.5 font-semibold text-gray-800 text-3xl md:text-4xl">
-          Nos outils et technologies
-        </h1>
+        <span class="text-blue-600 font-semibold">Technologies utilisées</span>
+        <h3 class="mt-0.5 font-semibold text-gray-800 text-3xl md:text-4xl">
+        Nous utilisons les dernières technologies en matière de développement web et informatique pour créer des solutions innovantes et performantes
+        </h3>
+        <p class="md:text-lg mt-8 text-gray-600">
+        Nous offrons des solutions sur mesure pour créer des sites web professionnels, des applications en ligne, des systèmes de gestion de contenu personnalisés, des plateformes de commerce électronique, et bien plus encore
+        </p>
       </div>
       <div
         class="pt-8 lg:pt-10 xl:pt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-6 md:gap-6 lg:gap-6 sm:items-stretch">
@@ -398,7 +416,7 @@
           Nos realistions les plus recentes
         </h1>
         <p class="md:text-lg mt-8 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem
+        Chez Fintchweb, nous sommes passionnés par la création de solutions web innovantes qui permettent à nos clients de se démarquer de la concurrence. Nous avons réalisé de nombreux projets au fil des ans, allant de la création de sites web professionnels pour des entreprises locales à la mise en place de systèmes de gestion de contenu et d'applications en ligne pour des clients internationaux
         </p>
       </div>
 
