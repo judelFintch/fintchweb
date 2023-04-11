@@ -432,9 +432,9 @@
               </div>
               <div class="space-y-5 mt-6  px-5 md:px-7 pb-5 md:pb-7">
                 <a href="pages/single-project.html" class="font-semibold text-gray-800 text-xl ">Podux landing page</a>
-                <p class="text-base md:text-lg line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Culpa
-                  ipsa delectus quod?</p>
+                <p class="text-base md:text-lg line-clamp-2"> 
+                Podux est une plateforme de podcast qui permet aux utilisateurs de publier, lire et suivre des podcasts en temps réel sur plusieurs sujets. Avec notre plateforme, les utilisateurs peuvent facilement trouver et écouter leurs podcasts préférés, découvrir de nouveaux contenus et interagir avec d'autres auditeurs. 
+                  </p>
                 <div class="flex">
                   <a href="https://podcas-landing-page.vercel.app" target="_blank" class="btn-underlined">
                     Visiter
@@ -453,9 +453,7 @@
               </div>
               <div class="space-y-5 mt-6  px-5 md:px-7 pb-5 md:pb-7">
                 <a href="pages/single-project.html" class="font-semibold text-gray-800 text-xl ">Developer personal website</a>
-                <p class="text-base md:text-lg line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Culpa
-                  ipsa delectus quod?</p>
+                <p class="text-base md:text-lg line-clamp-2">Nous avons développé un template pour  site internet professionnel dans le but d'aider les développeurs backend à se concentrer sur l'essentiel</p>
                 <div class="flex">
                   <a href="https://devolio-template.vercel.app/" target="_blank" class="btn-underlined">
                     Visiter
@@ -558,18 +556,21 @@
           Une agence qui booste votre business
         </h1>
         <p class="md:text-lg mt-8 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem nisi sint quibusdam minus
-          quasi consectetur, earum, consequatur quia architecto tempore ullam suscipit laborum,
+      Fintchwebs est une entreprise innovante, axée sur les résultat et passionnés par l'utilisation de la technologie pour aider les entreprises à atteindre leur plein potentiel.
+
+        Nous comprenons que chaque entreprise est unique et que chaque projet est différent. C'est pourquoi notre équipe de professionnels expérimentés travaille en étroite collaboration avec chaque client pour comprendre leurs besoins spécifiques et leur offrir des solutions sur mesure.
         </p>
         <ul class="mt-4 list-image-[url(checkmark.png)] pl-6 flex flex-col space-y-4">
-          <li>Lorem ipsum dolor sit amet consectetur</li>
-          <li>Lorem ipsum dolor sit amet consectetur</li>
-          <li>Lorem ipsum dolor sit amet consectetur</li>
-          <li>Lorem ipsum dolor sit amet consectetur</li>
-          <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Nous sommes spécialisés dans la conception de logiciels sur mesure pour répondre à vos besoins spécifiques</li>
+          <li>Notre équipe de conception travaille en étroite collaboration avec chaque client pour créer des sites Web dynamiques et attrayants</li>
+          <li>Nous offrons des solutions de marketing numérique complètes, y compris la publicité en ligne, les réseaux sociaux et le référencement</li>
+          <li>Nous utilisons les dernières technologies et les meilleures pratiques du secteur pour garantir des résultats exceptionnels à chaque projet</li>
+          <li>Nous sommes disponibles pour répondre à toutes vos questions et vous guider tout au long du processus, pour vous assurer que vous êtes satisfait de notre travail</li>
+
+          <li>Nous offrons des tarifs compétitifs et des délais de livraison rapides, pour vous permettre de réaliser votre projet dans les meilleurs délais</li>
         </ul>
         <div class="mt-10 flex">
-          <a href="about.html" class="border-blue-600 px-8 py-4 rounded-full border text-blue-600">
+          <a href="#" class="border-blue-600 px-8 py-4 rounded-full border text-blue-600">
             En savoir plus
           </a>
         </div>
@@ -586,8 +587,9 @@
           Une agence qui booste votre business
         </h1>
         <p class="md:text-lg mt-8 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem nisi sint quibusdam minus
-          quasi consectetur, earum, consequatur quia architecto tempore ullam suscipit laborum,
+        Nous offrons une large gamme de services, y compris la conception de logiciels sur mesure, la création de sites Web dynamiques et la mise en place de stratégies de marketing numérique efficaces. Nous travaillons avec des clients de toutes tailles et de tous secteurs d'activité, ce qui nous permet de comprendre et de répondre à leurs besoins spécifiques.
+
+Notre équipe de professionnels expérimentés possède une vaste expérience dans la conception de logiciels, la création de sites Web et le marketing numérique, ce qui nous permet de fournir un service exceptionnel à chaque étape du processus. Nous offrons des tarifs compétitifs et des délais de livraison rapides pour vous permettre de réaliser votre projet dans les meilleurs délais.
         </p>
       </div>
     </div>
