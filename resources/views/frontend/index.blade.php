@@ -699,17 +699,16 @@
                 <div class="flex h-full flex-col gap-1 sm:py-6 ">
                   <blockquote class="md:pb-5 pt-6 md:pt-0 w-full">
                     <p class="text-gray-600 font-medium text-lg lg:text-2xl md:leading-9 md:text-lg leading-6">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, praesentium perspiciatis. Eum
-                      nobis repudiandae blanditiis excepturi suscipit, unde facere tempore laborum asperiores libero
-                      saepe deleniti aliquid soluta provident? Eum, exercitationem?
+                    Nous avons été impressionnés par leur expertise en matière de développement de logiciels. Leur équipe a su répondre à nos besoins spécifiques en concevant des solutions efficaces et innovantes pour notre ecole 
                     </p>
                   </blockquote>
                   <div class="pt-1 flex items-center gap-4 md:max-w-xs">
                     <img alt="image of - John doe" loading="lazy" width="1700" height="1200"
-                      class="w-12 h-12 object-cover rounded-full" src="images/happy-work.webp">
+                      class="w-12 h-12 object-cover rounded-full" src="{{asset('images/checkmark-male-user-icon.svg')}}">
                     <div class="flex flex-col">
-                      <span class="text-title font-medium text-lg">John doe</span>
-                      <span class="text-text">CEO at Grace corp</span>
+                      <span class="text-title font-medium text-lg">Moise Yamba</span>
+                      <span class="text-text">Promo du CS berakha</span>
+                      <span class="text-text"><a href="csberakha.org">csberakha.org</a></span>
                     </div>
                   </div>
                 </div>
@@ -718,17 +717,17 @@
                 <div class="flex h-full flex-col gap-1 sm:py-6 ">
                   <blockquote class="md:pb-5 pt-6 md:pt-0">
                     <p class="text-gray-600 font-medium text-lg lg:text-2xl md:leading-9 md:text-lg leading-6">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, praesentium perspiciatis. Eum
-                      nobis repudiandae blanditiis excepturi suscipit, unde facere tempore laborum asperiores libero
-                      saepe deleniti aliquid soluta provident? Eum, exercitationem?
+                    Notre entreprise travaille avec cette agence depuis plus de deux ans maintenant, et nous avons été constamment impressionnés par la qualité de leur service
                     </p>
                   </blockquote>
                   <div class="pt-1 flex items-center gap-4 md:max-w-xs">
                     <img alt="image of - John doe" loading="lazy" width="1700" height="1200"
-                      class="w-12 h-12 object-cover rounded-full" src="images/happy-work.webp">
+                      class="w-12 h-12 object-cover rounded-full" src="{{asset('images/checkmark-male-user-icon.svg')}}">
                     <div class="flex flex-col">
-                      <span class="text-title font-medium text-lg">John doe</span>
-                      <span class="text-text">CEO at Grace corp</span>
+                      <span class="text-title font-medium text-lg">Patrick DJAMBA</span>
+                      <span class="text-text">DG NEWCASTORM AGENCY</span>
+                      <span class="text-title font-medium text-lg"><a href="https://www.newcustomsagency.com/">www.newcustomsagency.com</a></span>
+
                     </div>
                   </div>
                 </div>
@@ -791,7 +790,7 @@
                 Obenir un devis
               </span>
             </a>
-            <a href="pages/about.html"
+            <a href=""
               class="flex justify-center w-full sm:w-max text-blue-600 px-8 py-4 rounded-full border border-blue-600">
               En savoir plus
             </a>

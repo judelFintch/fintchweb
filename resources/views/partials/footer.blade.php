@@ -15,8 +15,7 @@
                   Fintch Wb
                 </a>
               </div>
-              <p class="mb-5 font-sans text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.</p>
+              <p class="mb-5 font-sans text-gray-600 leading-relaxed">Fintch web est une entreprise innovante, axée sur les résultat et passionnés par l'utilisation de la technologie pour aider les entreprises à atteindre leur plein potentiel.</p>
 
             </div>
           </div>
