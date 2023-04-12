@@ -589,7 +589,7 @@
         <p class="md:text-lg mt-8 text-gray-600">
         Nous offrons une large gamme de services, y compris la conception de logiciels sur mesure, la création de sites Web dynamiques et la mise en place de stratégies de marketing numérique efficaces. Nous travaillons avec des clients de toutes tailles et de tous secteurs d'activité, ce qui nous permet de comprendre et de répondre à leurs besoins spécifiques.
 
-Notre équipe de professionnels expérimentés possède une vaste expérience dans la conception de logiciels, la création de sites Web et le marketing numérique, ce qui nous permet de fournir un service exceptionnel à chaque étape du processus. Nous offrons des tarifs compétitifs et des délais de livraison rapides pour vous permettre de réaliser votre projet dans les meilleurs délais.
+        Notre équipe de professionnels expérimentés possède une vaste expérience dans la conception de logiciels, la création de sites Web et le marketing numérique, ce qui nous permet de fournir un service exceptionnel à chaque étape du processus. Nous offrons des tarifs compétitifs et des délais de livraison rapides pour vous permettre de réaliser votre projet dans les meilleurs délais.
         </p>
       </div>
     </div>
@@ -608,10 +608,10 @@ Notre équipe de professionnels expérimentés possède une vaste expérience da
           </div>
           <div class="space-y-1">
             <h2 class="text-xl font-semibold text-gray-800">
-              Du sur mesure
+            Satisfaction du client est primordiale
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem
+            Nous sommes en mesure de personnaliser nos solutions en fonction des spécifications de chaque client, en utilisant les dernières technologies et méthodologies
             </p>
           </div>
         </div>
@@ -628,10 +628,10 @@ Notre équipe de professionnels expérimentés possède une vaste expérience da
           </div>
           <div class="space-y-1">
             <h2 class="text-xl font-semibold text-gray-800">
-              Du sur mesure
+            Approche créative
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem
+             Pour résoudre les problèmes et trouver des solutions innovantes
             </p>
           </div>
         </div>
@@ -650,10 +650,10 @@ Notre équipe de professionnels expérimentés possède une vaste expérience da
           </div>
           <div class="space-y-1">
             <h2 class="text-xl font-semibold text-gray-800">
-              Du sur mesure
+              Rapidité d'execution
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deserunt culpa autem
+            Nous avons des processus bien établis pour assurer la rapidité d'exécution de chaque projet, tout en garantissant la qualité du travail
             </p>
           </div>
         </div>
@@ -781,7 +781,7 @@ Notre équipe de professionnels expérimentés possède une vaste expérience da
             Vous avez un projet ? Alors n'attendez pas plus
           </h2>
           <p class="mt-4 text-xl font-medium text-gray-700 md:text-lg">
-            Lorem ipsum dolor sit amet consectetur
+          Nous sommes impatients de travailler avec vous pour réaliser votre projet et pour créer des résultats exceptionnels pour votre entreprise
           </p>
 
           <div class="flex mt-8 justify-center gap-4 flex-col sm:flex-row">
