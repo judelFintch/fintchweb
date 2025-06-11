@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="{{asset('assets/main.css')}}">
   <link rel="stylesheet" href="{{asset('assets/productslide.css')}}">
+  @livewireStyles
 </head>
 
     
@@ -22,6 +23,7 @@
             @include('partials.footer')
   <script src="{{asset('assets/main.js')}}"></script>
   <script src="{{asset('assets/js/productslide.js')}}"></script>
+  @livewireScripts
     </body>
 </html>
 
