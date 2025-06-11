@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeFrondendController;
+use App\Http\Livewire\HomePage;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,4 @@ use App\Http\Controllers\HomeFrondendController;
 |
 */
 
-Route::controller(HomeFrondendController::class)->group(function () {
-    Route::get('/', 'index')->name("pages.home");
-  
-});
+Route::get('/', HomePage::class)->name('pages.home');
