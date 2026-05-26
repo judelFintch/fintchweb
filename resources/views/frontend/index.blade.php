@@ -501,7 +501,7 @@
     </h2>
     <p class="text-white/50 text-sm max-w-lg mx-auto mb-9">Devis gratuit en 24h. Pas d'engagement, pas de frais cachés. Juste une conversation.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3">
-      <a href="#" class="group inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg shadow-blue-600/25 text-sm">
+      <a href="/devis" class="group inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-full transition-all shadow-lg shadow-blue-600/25 text-sm">
         Obtenir un devis gratuit
         <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
