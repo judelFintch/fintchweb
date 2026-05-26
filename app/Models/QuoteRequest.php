@@ -12,6 +12,7 @@ class QuoteRequest extends Model
     public const STATUS_NEW = 'new';
     public const STATUS_CONTACTED = 'contacted';
     public const STATUS_DISCUSSION = 'discussion';
+    public const STATUS_QUOTE_SENT = 'quote_sent';
     public const STATUS_ACCEPTED = 'accepted';
     public const STATUS_REFUSED = 'refused';
 
@@ -25,6 +26,9 @@ class QuoteRequest extends Model
         'deadline',
         'needs',
         'status',
+        'selected_pack',
+        'estimated_amount',
+        'follow_up_at',
         'admin_notes',
         'client_notified_at',
         'admin_notified_at',
@@ -36,16 +40,49 @@ class QuoteRequest extends Model
         'client_notified_at' => 'datetime',
         'admin_notified_at' => 'datetime',
         'notification_failed_at' => 'datetime',
+        'follow_up_at' => 'date',
+        'estimated_amount' => 'decimal:2',
     ];
 
     public static function statuses(): array
     {
         return [
             self::STATUS_NEW => 'Nouveau',
-            self::STATUS_CONTACTED => 'Contacte',
+            self::STATUS_CONTACTED => 'Qualifie',
             self::STATUS_DISCUSSION => 'En discussion',
-            self::STATUS_ACCEPTED => 'Accepte',
-            self::STATUS_REFUSED => 'Refuse',
+            self::STATUS_QUOTE_SENT => 'Devis envoye',
+            self::STATUS_ACCEPTED => 'Gagne',
+            self::STATUS_REFUSED => 'Perdu',
+        ];
+    }
+
+    public static function packs(): array
+    {
+        return [
+            'starter' => 'Starter',
+            'pro' => 'Pro',
+            'enterprise' => 'Enterprise',
+        ];
+    }
+
+    public static function packDefaults(): array
+    {
+        return [
+            'starter' => [
+                'project_type' => 'site-vitrine',
+                'budget' => '500-1000',
+                'needs' => 'Je suis interesse par le pack Starter pour un site vitrine. Voici mon besoin : ',
+            ],
+            'pro' => [
+                'project_type' => 'application-web',
+                'budget' => '1000-3000',
+                'needs' => 'Je suis interesse par le pack Pro pour une solution web sur mesure. Voici mon besoin : ',
+            ],
+            'enterprise' => [
+                'project_type' => 'logiciel-metier',
+                'budget' => 'a-definir',
+                'needs' => 'Je suis interesse par le pack Enterprise pour un projet complexe. Voici mon besoin : ',
+            ],
         ];
     }
 

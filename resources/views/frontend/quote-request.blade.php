@@ -10,6 +10,11 @@
       <p class="text-white/60 text-lg max-w-2xl mx-auto">
         Votre demande est enregistree dans notre back-office et transmise directement par email a notre equipe.
       </p>
+      @if($selected_pack)
+        <div class="mt-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-100">
+          Pack selectionne : <strong>{{ $packs[$selected_pack] }}</strong>
+        </div>
+      @endif
     </div>
   </section>
 
@@ -48,6 +53,12 @@
           </div>
         @else
           <form wire:submit.prevent="submit" class="space-y-5">
+            @if($selected_pack)
+              <div class="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm text-blue-800">
+                Le pack {{ $packs[$selected_pack] }} est deja associe a cette demande. Vous pouvez ajuster les champs avant l'envoi.
+              </div>
+            @endif
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Nom complet *</label>
@@ -60,6 +71,8 @@
                 @error('email') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
               </div>
             </div>
+
+            <input wire:model="selected_pack" type="hidden">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>

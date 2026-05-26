@@ -18,6 +18,12 @@
             <dt class="text-slate-500">Type de projet</dt>
             <dd class="font-semibold text-slate-900">{{ $quoteRequest->project_type_label }}</dd>
           </div>
+          @if($quoteRequest->selected_pack)
+            <div>
+              <dt class="text-slate-500">Pack</dt>
+              <dd class="font-semibold text-slate-900">{{ \App\Models\QuoteRequest::packs()[$quoteRequest->selected_pack] ?? $quoteRequest->selected_pack }}</dd>
+            </div>
+          @endif
           <div>
             <dt class="text-slate-500">Budget</dt>
             <dd class="font-semibold text-slate-900">{{ $quoteRequest->budget_label ?: 'Non precise' }}</dd>
@@ -52,6 +58,16 @@
             @error('status') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
           </div>
           <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1.5">Montant estime USD</label>
+            <input wire:model.live.debounce.300ms="estimated_amount" type="number" min="0" step="0.01" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none text-sm">
+            @error('estimated_amount') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1.5">Date de relance</label>
+            <input wire:model.live="follow_up_at" type="date" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none text-sm">
+            @error('follow_up_at') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
+          </div>
+          <div>
             <label class="block text-sm font-medium text-slate-700 mb-1.5">Notes internes</label>
             <textarea wire:model.live.debounce.300ms="admin_notes" rows="7" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none text-sm resize-none"></textarea>
             @error('admin_notes') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
@@ -65,6 +81,12 @@
       <div class="bg-white border border-slate-200 rounded-xl p-6">
         <h2 class="text-lg font-bold text-slate-950 mb-5">Client</h2>
         <div class="space-y-4 text-sm">
+          <div class="grid grid-cols-1 gap-2">
+            <a href="mailto:{{ $quoteRequest->email }}?subject=Votre demande de devis Fintch Web" class="inline-flex justify-center px-4 py-2.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">Repondre par email</a>
+            @if($quoteRequest->phone)
+              <a href="https://wa.me/{{ preg_replace('/\D+/', '', $quoteRequest->phone) }}" target="_blank" rel="noopener" class="inline-flex justify-center px-4 py-2.5 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700">Contacter WhatsApp</a>
+            @endif
+          </div>
           <div>
             <div class="text-slate-500">Email</div>
             <a href="mailto:{{ $quoteRequest->email }}" class="font-semibold text-blue-600 hover:text-blue-700">{{ $quoteRequest->email }}</a>

@@ -13,11 +13,15 @@ class AdminQuoteRequestShowPage extends Component
 {
     public QuoteRequest $quoteRequest;
     public string $status = '';
+    public string $estimated_amount = '';
+    public string $follow_up_at = '';
     public string $admin_notes = '';
     public bool $saved = false;
 
     protected array $rules = [
-        'status' => 'required|in:new,contacted,discussion,accepted,refused',
+        'status' => 'required|in:new,contacted,discussion,quote_sent,accepted,refused',
+        'estimated_amount' => 'nullable|numeric|min:0|max:999999999',
+        'follow_up_at' => 'nullable|date',
         'admin_notes' => 'nullable|max:5000',
     ];
 
@@ -25,6 +29,8 @@ class AdminQuoteRequestShowPage extends Component
     {
         $this->quoteRequest = $quoteRequest;
         $this->status = $quoteRequest->status;
+        $this->estimated_amount = $quoteRequest->estimated_amount !== null ? (string) $quoteRequest->estimated_amount : '';
+        $this->follow_up_at = $quoteRequest->follow_up_at?->format('Y-m-d') ?? '';
         $this->admin_notes = (string) $quoteRequest->admin_notes;
     }
 
@@ -34,6 +40,8 @@ class AdminQuoteRequestShowPage extends Component
 
         $this->quoteRequest->update([
             'status' => $this->status,
+            'estimated_amount' => $this->estimated_amount !== '' ? $this->estimated_amount : null,
+            'follow_up_at' => $this->follow_up_at !== '' ? $this->follow_up_at : null,
             'admin_notes' => $this->admin_notes,
         ]);
 

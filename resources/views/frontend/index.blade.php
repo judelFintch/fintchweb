@@ -36,7 +36,7 @@
 
     {{-- CTAs --}}
     <div class="flex flex-wrap justify-center gap-3 mb-16">
-      <a href="#contact" class="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-blue-600/25 text-sm">
+      <a href="/devis" class="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-blue-600/25 text-sm">
         Démarrer un projet
         <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
@@ -116,6 +116,20 @@
         </div>
         <h3 class="font-semibold text-gray-800 text-sm mb-1.5">{{ $title }}</h3>
         <p class="text-gray-500 text-xs leading-relaxed">{{ $desc }}</p>
+        @php
+          $serviceSlug = [
+            'Web Design UI/UX' => 'site-web',
+            'Développement web' => 'logiciel-metier',
+            'Caméras de surveillance' => 'cameras-surveillance',
+            'Marketing & SEO' => 'site-web',
+            'Cybersécurité' => 'maintenance',
+            'E-commerce' => 'ecommerce',
+            'Apps mobiles' => 'logiciel-metier',
+            'Hébergement & DevOps' => 'maintenance',
+            'Maintenance' => 'maintenance',
+          ][$title] ?? 'site-web';
+        @endphp
+        <a href="/services/{{ $serviceSlug }}" class="mt-4 inline-flex text-xs font-semibold text-blue-600 hover:text-blue-700">Details du service</a>
       </div>
       @endforeach
     </div>
@@ -154,7 +168,7 @@
 {{-- ═══════════════════════════════════════════
     À PROPOS — split layout compact
 ═══════════════════════════════════════════ --}}
-<section class="bg-gray-50 py-16 lg:py-20">
+<section id="about" class="bg-gray-50 py-16 lg:py-20">
   <div class="mx-auto max-w-6xl px-5 sm:px-10 lg:px-8">
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
       <div class="lg:w-5/12 relative" data-aos="fade-right">
@@ -189,7 +203,7 @@
           </div>
           @endforeach
         </div>
-        <a href="#" class="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300">
+        <a href="/portfolio" class="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300">
           En savoir plus
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -356,7 +370,7 @@
           <li class="flex items-center gap-2.5 text-white/20"><svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>{{ $f }}</li>
           @endforeach
         </ul>
-        <a href="#" class="block text-center border border-white/20 hover:border-blue-500 text-white/70 hover:text-white text-sm font-semibold py-2.5 rounded-full transition-all">Démarrer</a>
+        <a href="/devis?pack=starter" class="block text-center border border-white/20 hover:border-blue-500 text-white/70 hover:text-white text-sm font-semibold py-2.5 rounded-full transition-all">Démarrer</a>
       </div>
 
       {{-- Pro — mis en avant --}}
@@ -372,7 +386,7 @@
           <li class="flex items-center gap-2.5 text-blue-100"><svg class="w-4 h-4 text-emerald-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>{{ $f }}</li>
           @endforeach
         </ul>
-        <a href="#" class="block text-center bg-white text-blue-700 hover:bg-blue-50 text-sm font-bold py-2.5 rounded-full transition-all">Choisir Pro</a>
+        <a href="/devis?pack=pro" class="block text-center bg-white text-blue-700 hover:bg-blue-50 text-sm font-bold py-2.5 rounded-full transition-all">Choisir Pro</a>
       </div>
 
       {{-- Enterprise --}}
@@ -385,7 +399,7 @@
           <li class="flex items-center gap-2.5 text-white/70"><svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>{{ $f }}</li>
           @endforeach
         </ul>
-        <a href="#contact" class="block text-center border border-white/20 hover:border-blue-500 text-white/70 hover:text-white text-sm font-semibold py-2.5 rounded-full transition-all">Nous contacter</a>
+        <a href="/devis?pack=enterprise" class="block text-center border border-white/20 hover:border-blue-500 text-white/70 hover:text-white text-sm font-semibold py-2.5 rounded-full transition-all">Nous contacter</a>
       </div>
     </div>
   </div>
@@ -394,7 +408,7 @@
 {{-- ═══════════════════════════════════════════
     TÉMOIGNAGES — fond blanc, 2 colonnes
 ═══════════════════════════════════════════ --}}
-<section class="bg-white py-16 lg:py-20">
+<section id="faq" class="bg-white py-16 lg:py-20">
   <div class="mx-auto max-w-6xl px-5 sm:px-10 lg:px-8">
     <div class="text-center mb-10" data-aos="fade-up">
       <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Témoignages</span>

@@ -6,6 +6,7 @@
         <h1 class="text-2xl font-bold text-slate-950">Demandes de devis</h1>
       </div>
       <div class="flex items-center gap-3">
+        <a href="{{ route('admin.quotes.export') }}" class="px-4 py-2 rounded-lg border border-slate-200 text-sm font-semibold text-slate-600 hover:bg-slate-50">Export CSV</a>
         <a href="/" class="px-4 py-2 rounded-lg border border-slate-200 text-sm font-semibold text-slate-600 hover:bg-slate-50">Site</a>
         <button wire:click="logout" class="px-4 py-2 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800">Deconnexion</button>
       </div>
@@ -39,6 +40,7 @@
               <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Client</th>
               <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Projet</th>
               <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Statut</th>
+              <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Relance</th>
               <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Notification</th>
               <th class="px-5 py-3 text-left text-xs font-semibold uppercase text-slate-500">Date</th>
               <th class="px-5 py-3"></th>
@@ -57,9 +59,18 @@
                 <td class="px-5 py-4">
                   <div class="text-sm font-medium text-slate-800">{{ $quote->project_type_label }}</div>
                   <div class="text-xs text-slate-500">{{ $quote->budget_label ?: 'Budget non precise' }}</div>
+                  @if($quote->selected_pack)
+                    <div class="text-xs text-blue-600 font-semibold">Pack {{ \App\Models\QuoteRequest::packs()[$quote->selected_pack] ?? $quote->selected_pack }}</div>
+                  @endif
+                  @if($quote->estimated_amount)
+                    <div class="text-xs text-slate-500">{{ number_format((float) $quote->estimated_amount, 0, ',', ' ') }} USD estime</div>
+                  @endif
                 </td>
                 <td class="px-5 py-4">
                   <span class="inline-flex px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">{{ $quote->status_label }}</span>
+                </td>
+                <td class="px-5 py-4 text-sm text-slate-500">
+                  {{ $quote->follow_up_at ? $quote->follow_up_at->format('d/m/Y') : '-' }}
                 </td>
                 <td class="px-5 py-4 text-sm">
                   @if($quote->notification_failed_at)
@@ -77,7 +88,7 @@
               </tr>
             @empty
               <tr>
-                <td colspan="6" class="px-5 py-12 text-center text-slate-500">Aucune demande trouvee.</td>
+                <td colspan="7" class="px-5 py-12 text-center text-slate-500">Aucune demande trouvee.</td>
               </tr>
             @endforelse
           </tbody>
