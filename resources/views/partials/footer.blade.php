@@ -44,11 +44,12 @@
       <div>
         <h4 class="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Services</h4>
         <ul class="space-y-3 text-white/50 text-sm">
-          <li><a href="#" class="hover:text-white transition-colors duration-200">Web Design</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-200">Développement web</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-200">Applications mobiles</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-200">Cybersécurité</a></li>
-          <li><a href="#" class="hover:text-white transition-colors duration-200">E-commerce</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">Web Design</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">Développement web</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">Applications mobiles</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">Cybersécurité</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">E-commerce</a></li>
+          <li><a href="/#services" class="hover:text-white transition-colors duration-200">Caméras de surveillance</a></li>
         </ul>
       </div>
 

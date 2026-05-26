@@ -7,18 +7,18 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
   <title>{{ $title ?? 'Fintch Web' }}</title>
-  <meta name="description" content="{{ $description ?? 'Agence de développement web et logiciel, spécialisée en UX/UI, performance et sécurité.' }}">
+  <meta name="description" content="{{ $description ?? 'Agence digitale spécialisée en développement web, logiciels métier, applications mobiles et installation de caméras de surveillance.' }}">
 
   {{-- Open Graph --}}
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Fintch Web" />
   <meta property="og:title" content="{{ $title ?? 'Fintch Web — Agence digitale' }}" />
-  <meta property="og:description" content="{{ $description ?? 'Agence de développement web et logiciel, spécialisée en UX/UI, performance et sécurité.' }}" />
+  <meta property="og:description" content="{{ $description ?? 'Agence digitale spécialisée en développement web, logiciels métier, applications mobiles et installation de caméras de surveillance.' }}" />
   <meta property="og:url" content="{{ url()->current() }}" />
   <meta property="og:image" content="{{ asset('assets/og-image.jpg') }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ $title ?? 'Fintch Web' }}" />
-  <meta name="twitter:description" content="{{ $description ?? 'Agence de développement web et logiciel.' }}" />
+  <meta name="twitter:description" content="{{ $description ?? 'Développement web, logiciels métier, apps mobiles et installation de caméras de surveillance.' }}" />
   <meta name="twitter:image" content="{{ asset('assets/og-image.jpg') }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
