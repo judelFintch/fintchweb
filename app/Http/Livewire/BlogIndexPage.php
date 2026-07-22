@@ -13,7 +13,7 @@ class BlogIndexPage extends Component
 {
     public function render()
     {
-        $articles = collect(BlogArticles::all())
+        $articles = collect(BlogArticles::all(app()->getLocale()))
             ->map(fn ($article, $slug) => [...$article, 'slug' => $slug])
             ->values()
             ->all();

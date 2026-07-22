@@ -13,14 +13,14 @@ class BlogShowPage extends Component
 
     public function mount(string $slug): void
     {
-        abort_unless(BlogArticles::find($slug) !== null, 404);
+        abort_unless(BlogArticles::find($slug, app()->getLocale()) !== null, 404);
 
         $this->slug = $slug;
     }
 
     public function render()
     {
-        $article = BlogArticles::find($this->slug);
+        $article = BlogArticles::find($this->slug, app()->getLocale());
 
         return view('frontend.blog-show', [
             'article' => $article,

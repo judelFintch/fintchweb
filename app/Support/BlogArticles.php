@@ -4,7 +4,17 @@ namespace App\Support;
 
 class BlogArticles
 {
-    public static function all(): array
+    public static function all(string $locale = 'fr'): array
+    {
+        return $locale === 'en' ? self::en() : self::fr();
+    }
+
+    public static function find(string $slug, string $locale = 'fr'): ?array
+    {
+        return self::all($locale)[$slug] ?? null;
+    }
+
+    protected static function fr(): array
     {
         return [
             'prix-site-web-rdc' => [
@@ -110,8 +120,109 @@ class BlogArticles
         ];
     }
 
-    public static function find(string $slug): ?array
+    protected static function en(): array
     {
-        return self::all()[$slug] ?? null;
+        return [
+            'prix-site-web-rdc' => [
+                'title' => 'How much does a professional website cost in the DRC?',
+                'meta_description' => 'Price of a showcase site, e-commerce store or custom software in the DRC: the factors that drive the budget and how to prepare it well.',
+                'category' => 'Website',
+                'read_time' => '5 min',
+                'excerpt' => 'Prices vary a lot depending on the complexity of the project. Here are the real factors behind a quote, so you can avoid bad surprises.',
+                'sections' => [
+                    [
+                        'heading' => 'Why prices vary so much',
+                        'paragraphs' => [
+                            'It\'s the question we get asked the most: "how much does a website cost?" The honest answer is "it depends" — not to dodge it, but because a 5-page showcase site and management software with authentication, roles and reports have nothing in common in terms of work.',
+                            'A serious quote takes into account the number of pages, the design (adjusted template or custom mockup), the features (a simple form or a full dashboard), and the maintenance planned after launch.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'The main price ranges',
+                        'paragraphs' => [
+                            'For a simple showcase site (presentation, contact, a few pages), expect generally between 500 and 1,000 USD. For an online store with payment and order management, the range rises to 1,000–3,000 USD. Custom business software (ERP, POS, clinic or pharmacy management) usually starts from 3,000 USD, depending on the number of modules and integrations.',
+                            'These amounts aren\'t fixed: they also depend on the desired timeline and the complexity of integrations (mobile payment, SMS, third-party APIs).',
+                        ],
+                    ],
+                    [
+                        'heading' => 'What drives up the bill without you seeing it coming',
+                        'paragraphs' => [
+                            'Three things explain most budget overruns: features added along the way, content not ready (text, photos, logo) at the start, and forgetting maintenance after delivery.',
+                            'A site that\'s never updated quickly becomes a security risk or a technical bottleneck. That\'s why we always recommend planning a monthly follow-up budget — even a small one — right from the quote, instead of discovering the need afterwards.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'How to prepare your quote request well',
+                        'paragraphs' => [
+                            'Before writing to us, note down: the site\'s main goal (sell, inform, manage an internal activity), the desired timeline, and if possible one or two examples of sites you like. This lets us reply with an accurate estimate from the very first exchange, instead of a back-and-forth of questions.',
+                        ],
+                    ],
+                ],
+            ],
+            'logiciel-gestion-metier-rdc' => [
+                'title' => 'Pharmacy, clinic, retail: why switch to custom software',
+                'meta_description' => 'Excel, paper notebooks or generic software: why clinics, pharmacies and shops in the DRC benefit from switching to custom management software.',
+                'category' => 'Business software',
+                'read_time' => '4 min',
+                'excerpt' => 'Many businesses in the DRC still manage stock, sales or patient records with tools that don\'t talk to each other. Here\'s what custom software actually changes.',
+                'sections' => [
+                    [
+                        'heading' => 'The classic problem: tools that don\'t talk to each other',
+                        'paragraphs' => [
+                            'Many organizations — clinics, pharmacies, hardware stores, shops — use a mix of notebooks, Excel files and sometimes basic checkout software. Each tool works on its own, but no one has a real-time overview: stock on one side, sales on another, accounting somewhere else entirely.',
+                            'That\'s exactly the problem we solved for ClinicSoft, a medical SaaS with 74 modules covering reception, lab, pharmacy and billing in a single system — or for Smart Hardware ERP, which centralizes several stores and warehouses for a hardware business.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'What custom software actually changes',
+                        'paragraphs' => [
+                            'A system designed for your specific business — rather than generic imported software — adapts to your real processes: your product categories, your team roles, your invoicing habits. That avoids bending your way of working to the limits of a tool built for another market.',
+                            'Concretely: less manual re-entry between tools, sales or stock reports available at any time, and clear traceability of who did what (useful both for management and for trust between partners).',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Custom doesn\'t mean expensive',
+                        'paragraphs' => [
+                            'It\'s the most common misconception: "custom" makes people think of a huge budget. In reality, a project can start with the essential modules (checkout, stock, reports) and grow later in stages, at the pace of your growth and your budget — rather than building everything at once.',
+                        ],
+                    ],
+                ],
+            ],
+            'installation-cameras-surveillance-kinshasa' => [
+                'title' => 'Installing surveillance cameras: a practical guide for your business',
+                'meta_description' => 'How to choose and install CCTV/IP surveillance cameras for a shop, warehouse or office in the DRC: what to check before you start.',
+                'category' => 'Security',
+                'read_time' => '4 min',
+                'excerpt' => 'Before installing cameras, a few simple questions help you avoid investing in a system poorly suited to your premises or your budget.',
+                'sections' => [
+                    [
+                        'heading' => 'Define what you want to monitor, and why',
+                        'paragraphs' => [
+                            'A shop, a warehouse and an office don\'t have the same needs. A shop often wants to monitor the register and entries/exits; a warehouse focuses on access control and storage areas; an office wants to secure the entrance and sensitive spaces. This first question shapes everything else: number of cameras, placement, and the image quality level needed.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Wired CCTV or IP cameras: the practical difference',
+                        'paragraphs' => [
+                            'Classic CCTV systems are reliable and don\'t depend on internet, but require dedicated cabling. IP cameras offer remote access from a phone, often better night vision, and integrate more easily into an existing network — at the cost of depending on a stable connection.',
+                            'The right choice depends on your premises (cabling already in place or not), the quality of your internet connection, and the real need to view footage remotely.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'The most common mistakes',
+                        'paragraphs' => [
+                            'Underestimating night lighting, placing cameras too high to identify a face, or choosing a system without thinking about maintenance (who checks the cameras still work in 6 months?) are the three mistakes we correct most often during an audit.',
+                            'A good surveillance system always includes preventive maintenance: regular checks of the cameras, of recording storage, and of remote access.',
+                        ],
+                    ],
+                    [
+                        'heading' => 'Our approach',
+                        'paragraphs' => [
+                            'We always start with an on-site audit before proposing a system — never the other way around. That lets us size the number of cameras correctly and avoid paying for equipment that\'s oversized (or insufficient) for your actual premises.',
+                        ],
+                    ],
+                ],
+            ],
+        ];
     }
 }
