@@ -7,15 +7,32 @@ use App\Http\Livewire\ContactPage;
 use App\Http\Livewire\PortfolioPage;
 use App\Http\Livewire\QuoteRequestPage;
 use App\Http\Livewire\ServicePage;
+use App\Http\Livewire\BlogIndexPage;
+use App\Http\Livewire\BlogShowPage;
 use App\Http\Livewire\AdminLoginPage;
 use App\Http\Livewire\AdminQuoteRequestsPage;
 use App\Http\Livewire\AdminQuoteRequestShowPage;
 
-Route::get('/', HomePage::class)->name('pages.home');
-Route::get('/contact', ContactPage::class)->name('pages.contact');
-Route::get('/portfolio', PortfolioPage::class)->name('pages.portfolio');
-Route::get('/devis', QuoteRequestPage::class)->name('quote-requests.create');
-Route::get('/services/{slug}', ServicePage::class)->name('services.show');
+Route::middleware('setlocale:fr')->group(function () {
+    Route::get('/', HomePage::class)->name('pages.home');
+    Route::get('/contact', ContactPage::class)->name('pages.contact');
+    Route::get('/portfolio', PortfolioPage::class)->name('pages.portfolio');
+    Route::get('/devis', QuoteRequestPage::class)->name('quote-requests.create');
+    Route::get('/services/{slug}', ServicePage::class)->name('services.show');
+    Route::get('/blog', BlogIndexPage::class)->name('pages.blog');
+    Route::get('/blog/{slug}', BlogShowPage::class)->name('blog.show');
+});
+
+Route::middleware('setlocale:en')->prefix('en')->group(function () {
+    Route::get('/', HomePage::class)->name('pages.home.en');
+    Route::get('/contact', ContactPage::class)->name('pages.contact.en');
+    Route::get('/portfolio', PortfolioPage::class)->name('pages.portfolio.en');
+    Route::get('/devis', QuoteRequestPage::class)->name('quote-requests.create.en');
+    Route::get('/services/{slug}', ServicePage::class)->name('services.show.en');
+    Route::get('/blog', BlogIndexPage::class)->name('pages.blog.en');
+    Route::get('/blog/{slug}', BlogShowPage::class)->name('blog.show.en');
+});
+
 Route::redirect('/admin', '/admin/devis')->name('admin.home');
 
 Route::middleware('guest')->group(function () {

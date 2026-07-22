@@ -1,5 +1,5 @@
 {{-- Bouton WhatsApp flottant --}}
-<a href="https://call.whatsapp.com/voice/wFeqG3KGDt4jpN1yFe8zPG"
+<a href="https://wa.me/243976938094?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet."
    class="fab-whatsapp group"
    title="Nous appeler sur WhatsApp"
    aria-label="WhatsApp">

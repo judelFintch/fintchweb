@@ -12,7 +12,7 @@ class PortfolioPage extends Component
 {
     public string $activeCategory = 'all';
 
-    public array $categories = ['all', 'logiciel', 'web', 'mobile', 'ecommerce', 'design'];
+    public array $categories = ['all', 'logiciel', 'web'];
 
     public array $projects = [
         [
@@ -20,6 +20,7 @@ class PortfolioPage extends Component
             'category' => 'logiciel',
             'tags'     => ['Laravel', 'Livewire', 'MySQL', 'SaaS Médical'],
             'desc'     => 'SaaS médical complet avec 74 modules : réception, laboratoire, bloc opératoire, maternité, pharmacie, imagerie, facturation, comptabilité et pilotage.',
+            'result'   => 'Un seul système pour piloter tout l\'établissement, de l\'admission à la facturation, sans jongler entre plusieurs outils.',
             'url'      => null,
             'image'    => 'portfolio/clinicsoft.png',
             'real'     => true,
@@ -30,6 +31,7 @@ class PortfolioPage extends Component
             'category' => 'logiciel',
             'tags'     => ['Laravel', 'Livewire', 'POS', 'Gestion Stock'],
             'desc'     => 'Plateforme de gestion magasin : caisse POS avec scan code-barres, catalogue produits, suivi des stocks, alertes, fournisseurs et rapports de ventes.',
+            'result'   => 'Caisse, stock et fournisseurs synchronisés en temps réel, avec des rapports de vente consultables à tout moment.',
             'url'      => null,
             'image'    => 'portfolio/nadhiyastore.png',
             'real'     => true,
@@ -40,60 +42,41 @@ class PortfolioPage extends Component
             'category' => 'web',
             'tags'     => ['Site web', 'Culture', 'Événements', 'Blog'],
             'desc'     => 'Site vitrine pour un centre d\'art multidisciplinaire : galerie, formations artistiques, événements, podcasts et blog culturel.',
+            'result'   => 'Une identité culturelle forte et cohérente en ligne — confirmée par le client lui-même (voir témoignage).',
             'url'      => 'https://www.orioncentredart.com/',
             'image'    => 'portfolio/orion.png',
             'real'     => true,
             'color'    => 'from-violet-600 to-purple-800',
+            'comment'  => [
+                'author' => 'La direction, Orion Centre d\'Art',
+                'text'   => 'Un site qui nous ressemble vraiment — moderne, vivant, et facile à faire évoluer.',
+            ],
         ],
         [
             'title'    => 'Smart Hardware ERP',
             'category' => 'logiciel',
             'tags'     => ['Laravel', 'Livewire', 'ERP', 'Multi-dépôts'],
             'desc'     => 'ERP pour quincaillerie : caisse POS, gestion multi-magasins/dépôts, achats, transferts de stock, inventaires, dépenses, rapports et rôles utilisateurs.',
+            'result'   => 'Une vision consolidée de tous les magasins et dépôts depuis un seul outil, achats et transferts inclus.',
             'url'      => null,
             'image'    => 'portfolio/smarthardware.png',
             'real'     => true,
             'color'    => 'from-slate-700 to-teal-800',
         ],
         [
-            'title'    => 'LuxeStore',
-            'category' => 'ecommerce',
-            'tags'     => ['Laravel', 'Livewire', 'Stripe'],
-            'desc'     => 'Boutique e-commerce haut de gamme avec paiement sécurisé et gestion des stocks en temps réel.',
-            'url'      => null,
-            'image'    => null,
-            'real'     => false,
-            'color'    => 'from-pink-500 to-rose-700',
-        ],
-        [
-            'title'    => 'MediTrack',
+            'title'    => 'ConsForest Maniema',
             'category' => 'web',
-            'tags'     => ['Vue.js', 'API REST', 'MySQL'],
-            'desc'     => 'Plateforme SaaS de suivi médical pour cliniques et cabinets indépendants.',
-            'url'      => null,
-            'image'    => null,
-            'real'     => false,
-            'color'    => 'from-cyan-500 to-blue-700',
-        ],
-        [
-            'title'    => 'FoodRunner',
-            'category' => 'mobile',
-            'tags'     => ['React Native', 'Firebase', 'Maps'],
-            'desc'     => 'Application de livraison de repas avec géolocalisation en temps réel.',
-            'url'      => null,
-            'image'    => null,
-            'real'     => false,
-            'color'    => 'from-orange-500 to-red-700',
-        ],
-        [
-            'title'    => 'BrandKit',
-            'category' => 'design',
-            'tags'     => ['Branding', 'Figma', 'Illustration'],
-            'desc'     => 'Identité visuelle complète pour startup tech : logo, palette, typographie et guide de marque.',
-            'url'      => null,
-            'image'    => null,
-            'real'     => false,
-            'color'    => 'from-amber-500 to-yellow-700',
+            'tags'     => ['Site web', 'ONG', 'Environnement', 'Crédit Carbone'],
+            'desc'     => 'Site vitrine pour un programme de conservation forestière en RDC : présentation du projet, crédits carbone REDD+, impact social, actualités et galerie de terrain.',
+            'result'   => 'Une vitrine professionnelle pour dialoguer avec des partenaires internationaux sur la conservation et le crédit carbone.',
+            'url'      => 'https://consforestmaniema.com/',
+            'image'    => 'portfolio/consforest.png',
+            'real'     => true,
+            'color'    => 'from-emerald-700 to-green-900',
+            'comment'  => [
+                'author' => 'La direction, ConsForest Maniema',
+                'text'   => 'Fintch Web a créé un site à la hauteur de notre mission : sobre, élégant et efficace pour présenter notre travail de conservation aux partenaires internationaux.',
+            ],
         ],
     ];
 

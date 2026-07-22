@@ -56,7 +56,8 @@
             {{-- Visual : screenshot réel ou gradient placeholder --}}
             <div class="relative h-52 overflow-hidden bg-gradient-to-br {{ $project['color'] }}">
               @if($project['image'])
-                <img src="{{ asset('assets/' . $project['image']) }}"
+                <img loading="lazy" decoding="async"
+                     src="{{ asset('assets/' . $project['image']) }}"
                      alt="Capture {{ $project['title'] }}"
                      class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -110,6 +111,21 @@
                   <span class="px-3 py-1 text-xs font-medium text-blue-700 bg-blue-50 rounded-full">{{ $tag }}</span>
                 @endforeach
               </div>
+              @if(!empty($project['result']))
+                <div class="flex items-start gap-2 mb-4">
+                  <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <p class="text-gray-700 text-xs font-medium leading-relaxed">{{ $project['result'] }}</p>
+                </div>
+              @endif
+              @if(!empty($project['comment']))
+                <div class="flex gap-2 mb-4 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                  <span class="text-gray-300 text-2xl font-serif leading-none select-none">"</span>
+                  <div>
+                    <p class="text-gray-600 text-xs italic leading-relaxed">{{ $project['comment']['text'] }}</p>
+                    <p class="text-gray-400 text-[11px] font-semibold mt-1.5">— {{ $project['comment']['author'] }}</p>
+                  </div>
+                </div>
+              @endif
               @if($project['url'])
                 <a href="{{ $project['url'] }}" target="_blank" rel="noopener"
                    class="inline-flex items-center gap-2 text-xs font-bold text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full transition-colors shadow-sm">

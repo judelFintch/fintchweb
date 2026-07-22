@@ -74,17 +74,100 @@
 </section>
 
 {{-- ═══════════════════════════════════════════
-    LOGOS CLIENTS — bande compacte
+    LOGOS CLIENTS — marquee moderne
 ═══════════════════════════════════════════ --}}
-<section class="bg-white border-y border-gray-100 py-8">
-  <div class="mx-auto max-w-6xl px-5 sm:px-10 lg:px-8">
-    <p class="text-center text-[11px] font-semibold text-gray-400 uppercase tracking-[0.2em] mb-7">Ils nous font confiance</p>
-    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-35 grayscale">
-      @foreach(['CS Berakha','NewCustorms','Podux','Devolio','E-Shop B2B'] as $c)
-        <span class="text-lg font-bold text-gray-800">{{ $c }}</span>
+<section class="relative bg-[#0a0f1e] border-y border-white/5 py-12 overflow-hidden">
+  {{-- Fond subtil --}}
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 left-1/3 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px]"></div>
+    <div class="absolute bottom-0 right-1/3 w-64 h-64 bg-purple-600/10 rounded-full blur-[80px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-5 sm:px-10 lg:px-8 mb-8 text-center">
+    <span class="inline-flex items-center gap-2 text-[11px] font-bold text-white/30 uppercase tracking-[0.25em]">
+      <span class="w-6 h-px bg-white/20"></span>
+      Ils nous font confiance
+      <span class="w-6 h-px bg-white/20"></span>
+    </span>
+  </div>
+
+  {{-- Marquee track --}}
+  <div class="relative">
+    {{-- Dégradés latéraux --}}
+    <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#0a0f1e] to-transparent"></div>
+    <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#0a0f1e] to-transparent"></div>
+
+    <div class="flex gap-5 overflow-hidden" style="mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent)">
+      @php
+        $clients = [
+          [
+            'name'  => 'NEW CUSTOMS AGENCY',
+            'icon'  => 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21',
+            'bg'    => 'linear-gradient(135deg,rgba(59,130,246,.18),rgba(99,102,241,.18))',
+            'border'=> 'rgba(99,102,241,.35)',
+            'color' => '#93c5fd',
+          ],
+          [
+            'name'  => 'QUIN BRANDY',
+            'icon'  => 'M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0',
+            'bg'    => 'linear-gradient(135deg,rgba(139,92,246,.18),rgba(236,72,153,.18))',
+            'border'=> 'rgba(167,139,250,.35)',
+            'color' => '#c4b5fd',
+          ],
+          [
+            'name'  => 'NADIA STORE',
+            'icon'  => 'M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z',
+            'bg'    => 'linear-gradient(135deg,rgba(16,185,129,.18),rgba(20,184,166,.18))',
+            'border'=> 'rgba(52,211,153,.35)',
+            'color' => '#6ee7b7',
+          ],
+          [
+            'name'  => 'JENOCAR SARL',
+            'icon'  => 'M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12',
+            'bg'    => 'linear-gradient(135deg,rgba(249,115,22,.18),rgba(245,158,11,.18))',
+            'border'=> 'rgba(251,146,60,.35)',
+            'color' => '#fdba74',
+          ],
+          [
+            'name'  => 'RENAISANCE MEDICAL CENTER',
+            'icon'  => 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
+            'bg'    => 'linear-gradient(135deg,rgba(244,63,94,.18),rgba(236,72,153,.18))',
+            'border'=> 'rgba(251,113,133,.35)',
+            'color' => '#fda4af',
+          ],
+        ];
+      @endphp
+
+      {{-- Piste dupliquée pour le loop infini --}}
+      @foreach([1,2] as $_)
+      <div class="flex gap-5 items-center animate-marquee shrink-0">
+        @foreach($clients as $client)
+        <div class="flex items-center gap-3 rounded-2xl px-5 py-3.5 whitespace-nowrap transition-transform duration-300 hover:scale-105 cursor-default"
+             style="background:{{ $client['bg'] }};border:1px solid {{ $client['border'] }};color:{{ $client['color'] }}">
+          <div class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,.08)">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="{{ $client['icon'] }}"/></svg>
+          </div>
+          <span class="text-sm font-bold tracking-wide">{{ $client['name'] }}</span>
+        </div>
+        @endforeach
+        <div class="w-1.5 h-1.5 rounded-full flex-shrink-0 mx-2" style="background:rgba(255,255,255,.1)"></div>
+      </div>
       @endforeach
     </div>
   </div>
+
+  <style>
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 22s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
 </section>
 
 {{-- ═══════════════════════════════════════════
@@ -173,7 +256,7 @@
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
       <div class="lg:w-5/12 relative" data-aos="fade-right">
         <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
-          <img src="images/happy-work.webp" alt="Équipe Fintch Web" class="w-full h-full object-cover">
+          <img loading="lazy" decoding="async" src="images/happy-work.webp" alt="Équipe Fintch Web" class="w-full h-full object-cover">
         </div>
         <div class="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-lg border border-gray-100 flex items-center gap-3">
           <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
@@ -232,7 +315,7 @@
       {{-- ClinicSoft — Projet réel --}}
       <div class="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
         <div class="overflow-hidden h-56 relative bg-gradient-to-br from-blue-600 to-indigo-800">
-          <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          <img loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                src="{{ asset('assets/portfolio/clinicsoft.png') }}" alt="ClinicSoft">
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
           <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
@@ -256,7 +339,7 @@
       {{-- NadhiyaStore — Projet réel --}}
       <div class="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
         <div class="overflow-hidden h-56 relative bg-[#f0fdf8]">
-          <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          <img loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                src="{{ asset('assets/portfolio/nadhiyastore.png') }}" alt="NadhiyaStore">
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
@@ -279,7 +362,7 @@
       {{-- Smart Hardware ERP — Projet réel --}}
       <div class="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
         <div class="overflow-hidden h-56 relative bg-[#f8fafc]">
-          <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          <img loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                src="{{ asset('assets/portfolio/smarthardware.png') }}" alt="Smart Hardware ERP">
           <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
@@ -302,7 +385,7 @@
       {{-- Orion Centre d'Art — Projet réel --}}
       <div class="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
         <div class="overflow-hidden h-56 relative bg-[#1a1200]">
-          <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          <img loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                src="{{ asset('assets/portfolio/orion.png') }}" alt="Orion Centre d'Art">
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
@@ -333,6 +416,44 @@
             <span class="text-xs font-medium bg-violet-50 text-violet-700 px-2.5 py-1 rounded-full">Culture & Art</span>
             <span class="text-xs font-medium bg-violet-50 text-violet-700 px-2.5 py-1 rounded-full">Événements</span>
             <span class="text-xs font-medium bg-violet-50 text-violet-700 px-2.5 py-1 rounded-full">Blog</span>
+          </div>
+        </div>
+      </div>
+
+      {{-- ConsForest Maniema — Projet réel --}}
+      <div class="group relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="overflow-hidden h-56 relative bg-[#0d1f14]">
+          <img loading="lazy" decoding="async" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+               src="{{ asset('assets/portfolio/consforest.png') }}" alt="ConsForest Maniema">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Réalisé
+          </span>
+          <span class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Site Web</span>
+          {{-- Bouton vert "Voir le site" au survol --}}
+          <a href="https://consforestmaniema.com/" target="_blank" rel="noopener"
+             class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300
+                    flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg whitespace-nowrap">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            Visiter le site
+          </a>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <h3 class="font-bold text-gray-900 text-lg">ConsForest Maniema</h3>
+            <a href="https://consforestmaniema.com/" target="_blank" rel="noopener"
+               class="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-bold text-white bg-green-500 hover:bg-green-600 px-3 py-1.5 rounded-full transition-colors shadow-sm">
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+              Voir le site
+            </a>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Site vitrine pour un programme de conservation forestière en RDC : crédits carbone REDD+, impact social, actualités et galerie de terrain.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">Site web</span>
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">ONG</span>
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">Environnement</span>
+            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full">Crédit Carbone</span>
           </div>
         </div>
       </div>
@@ -402,6 +523,29 @@
         <a href="/devis?pack=enterprise" class="block text-center border border-white/20 hover:border-blue-500 text-white/70 hover:text-white text-sm font-semibold py-2.5 rounded-full transition-all">Nous contacter</a>
       </div>
     </div>
+
+    {{-- Maintenance — abonnement mensuel récurrent --}}
+    <div class="mt-6 bg-gradient-to-r from-emerald-900/40 to-emerald-950/40 border border-emerald-500/20 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-start lg:items-center gap-6">
+      <div class="flex-1">
+        <span class="inline-flex items-center gap-1.5 text-[10px] font-black text-emerald-400 uppercase tracking-widest bg-emerald-400/10 px-2.5 py-1 rounded-full mb-3">
+          <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+          Abonnement mensuel
+        </span>
+        <h3 class="font-semibold text-white text-lg mb-1">Maintenance & support continu</h3>
+        <p class="text-white/50 text-xs mb-4 max-w-lg">Votre site déjà en ligne (chez nous ou ailleurs) reste à jour, sauvegardé et surveillé — sans que vous ayez à y penser.</p>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs">
+          @foreach(['Mises à jour','Sauvegardes régulières','Monitoring','Corrections rapides','Rapports mensuels'] as $f)
+          <span class="flex items-center gap-1.5 text-white/70"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>{{ $f }}</span>
+          @endforeach
+        </div>
+      </div>
+      <div class="flex flex-col items-start lg:items-end gap-3 flex-shrink-0">
+        <span class="text-xl font-bold text-white">Sur devis</span>
+        <a href="/devis?project_type=maintenance" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-emerald-950 text-sm font-bold px-6 py-2.5 rounded-full transition-all whitespace-nowrap">
+          Demander un devis maintenance
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -419,6 +563,8 @@
       @foreach([
         ['MY','from-blue-500 to-indigo-600','Moise Yamba','Promo du CS Berakha','csberakha.org','Nous avons été impressionnés par leur expertise. Leur équipe a répondu à nos besoins avec une solution efficace et fiable. Livraison dans les délais, accompagnement exemplaire.'],
         ['PD','from-violet-500 to-pink-600','Patrick DJAMBA','DG NEWCASTORM AGENCY','newcustomsagency.com','Deux ans de collaboration, et nous sommes constamment impressionnés par la qualité du service. Réactifs, pros et orientés résultats. On recommande sans hésiter.'],
+        ['OC','from-fuchsia-500 to-purple-700','La direction','Orion Centre d\'Art','orioncentredart.com','Fintch Web a su traduire l\'identité culturelle de notre centre en un site à la fois élégant et fonctionnel. Galerie, événements, formations, podcasts : tout est mis en valeur avec fluidité. Un accompagnement sérieux, à l\'écoute, et livré dans les temps.'],
+        ['CF','from-emerald-600 to-green-800','La direction','ConsForest Maniema','consforestmaniema.com','Fintch Web a créé un site à la hauteur de notre mission : sobre, élégant et efficace pour présenter notre travail de conservation forestière aux partenaires internationaux.'],
       ] as [$init,$grad,$name,$role,$site,$quote])
       <div class="relative bg-gray-50 rounded-2xl p-6 border border-gray-100">
         <div class="absolute top-5 right-6 text-gray-200 text-6xl font-serif leading-none select-none">"</div>
@@ -451,7 +597,7 @@
         ['HTML5','HTML5.svg'],['CSS3','CSS3.svg'],['Vercel','Vercel.svg'],['Bootstrap','Bootstrap.svg'],
       ] as [$name,$icon])
       <div class="group bg-white hover:bg-blue-50 rounded-xl p-3 text-center border border-gray-100 hover:border-blue-200 transition-all duration-200 cursor-default">
-        <img src="techicons/{{ $icon }}" alt="{{ $name }}" class="w-7 h-7 mx-auto mb-1.5 group-hover:scale-110 transition-transform duration-200">
+        <img loading="lazy" decoding="async" src="techicons/{{ $icon }}" alt="{{ $name }}" class="w-7 h-7 mx-auto mb-1.5 group-hover:scale-110 transition-transform duration-200">
         <p class="text-[9px] font-semibold text-gray-400 group-hover:text-blue-500 transition-colors leading-tight">{{ $name }}</p>
       </div>
       @endforeach
@@ -520,7 +666,7 @@
         Obtenir un devis gratuit
         <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
-      <a href="https://call.whatsapp.com/voice/wFeqG3KGDt4jpN1yFe8zPG" class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-emerald-500/50 text-white/70 hover:text-white font-semibold px-8 py-3.5 rounded-full transition-all text-sm hover:bg-emerald-500/10">
+      <a href="https://wa.me/243976938094?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet." class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-emerald-500/50 text-white/70 hover:text-white font-semibold px-8 py-3.5 rounded-full transition-all text-sm hover:bg-emerald-500/10">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-emerald-400" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
         WhatsApp
       </a>

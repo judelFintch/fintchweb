@@ -38,7 +38,7 @@
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-1">WhatsApp</h3>
-          <a href="https://call.whatsapp.com/voice/wFeqG3KGDt4jpN1yFe8zPG"
+          <a href="https://wa.me/243976938094?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet."
              class="text-green-600 text-sm font-medium hover:underline">
             Appeler directement →
           </a>
