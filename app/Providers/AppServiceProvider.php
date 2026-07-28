@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Keep application helpers available even when a deployment reuses an
+        // older generated Composer autoloader.
+        require_once app_path('helpers.php');
     }
 
     /**

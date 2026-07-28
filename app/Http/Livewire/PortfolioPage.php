@@ -16,6 +16,17 @@ class PortfolioPage extends Component
 
     public array $projects = [
         [
+            'title'    => 'Kelasi',
+            'category' => 'logiciel',
+            'tags'     => ['Laravel', 'Livewire', 'Gestion scolaire', 'SaaS'],
+            'desc'     => 'Application de gestion scolaire conçue pour centraliser les opérations administratives et le suivi quotidien des établissements.',
+            'result'   => 'Déjà adoptée par le Collège Saint Paul et l’École Bonne Bergère pour moderniser leur gestion.',
+            'url'      => null,
+            'image'    => 'portfolio/kelasi.png',
+            'real'     => true,
+            'color'    => 'from-sky-600 to-blue-800',
+        ],
+        [
             'title'    => 'ClinicSoft',
             'category' => 'logiciel',
             'tags'     => ['Laravel', 'Livewire', 'MySQL', 'SaaS Médical'],
