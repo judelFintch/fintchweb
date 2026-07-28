@@ -56,9 +56,11 @@
       <div>
         <h4 class="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Contact</h4>
         <ul class="space-y-3 text-white/50 text-sm">
-          <li class="flex items-start gap-2">
+          <li>
+            <a href="mailto:judel@fintchweb.com" class="hover:text-white transition-colors duration-200 flex items-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-            contact@fintchweb.com
+            judel@fintchweb.com
+            </a>
           </li>
           <li><a href="https://wa.me/243976938094?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20mon%20projet." class="hover:text-white transition-colors duration-200 flex items-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>

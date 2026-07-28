@@ -28,7 +28,7 @@
             </svg>
           </div>
           <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
-          <p class="text-gray-500 text-sm">contact@fintchweb.com</p>
+          <a href="mailto:judel@fintchweb.com" class="text-gray-500 hover:text-blue-600 text-sm transition-colors">judel@fintchweb.com</a>
         </div>
 
         <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6">

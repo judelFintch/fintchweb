@@ -64,6 +64,17 @@ class PortfolioPage extends Component
             ],
         ],
         [
+            'title'    => 'La Manne des Braves',
+            'category' => 'web',
+            'tags'     => ['Site web', 'Transit', 'Douane', 'Entreprise'],
+            'desc'     => 'Site institutionnel de La Manne des Braves SARL, transitaire officiel en RDC actif dans les opérations douanières, la construction et la sous-traitance.',
+            'result'   => 'Une présence en ligne professionnelle qui présente clairement l’entreprise, ses services, ses valeurs et ses implantations en RDC.',
+            'url'      => 'https://mannedesbraves.com/',
+            'image'    => null,
+            'real'     => true,
+            'color'    => 'from-amber-600 to-orange-800',
+        ],
+        [
             'title'    => 'Smart Hardware ERP',
             'category' => 'logiciel',
             'tags'     => ['Laravel', 'Livewire', 'ERP', 'Multi-dépôts'],

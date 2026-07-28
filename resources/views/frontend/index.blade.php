@@ -149,6 +149,13 @@
             'border'=> 'rgba(52,211,153,.35)',
             'color' => '#6ee7b7',
           ],
+          [
+            'name'  => 'LA MANNE DES BRAVES',
+            'icon'  => 'M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12',
+            'bg'    => 'linear-gradient(135deg,rgba(245,158,11,.18),rgba(234,88,12,.18))',
+            'border'=> 'rgba(251,191,36,.35)',
+            'color' => '#fcd34d',
+          ],
         ];
       @endphp
 
@@ -602,16 +609,24 @@
 ═══════════════════════════════════════════ --}}
 <section class="bg-gray-50 py-14 lg:py-16 border-t border-gray-100">
   <div class="mx-auto max-w-6xl px-5 sm:px-10 lg:px-8">
-    <p class="text-center text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">Stack technique</p>
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-8 gap-3">
+    <div class="text-center mb-8">
+      <p class="text-[11px] font-bold text-blue-600 uppercase tracking-[0.2em] mb-2">Stack technique</p>
+      <p class="text-sm text-gray-500">Les technologies que nous maîtrisons pour concevoir des solutions modernes et évolutives.</p>
+    </div>
+    <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 gap-3">
       @foreach([
-        ['TailwindCSS','TailwindCSS.svg'],['React','React.svg'],['Next.js','NextJs.svg'],['Vue.js','Vue.svg'],
-        ['Nuxt.js','NuxtJs.svg'],['TypeScript','TypeScript.svg'],['Laravel','Laravel.svg'],['PHP','PHP.svg'],
-        ['MySQL','MySQL.svg'],['Vite','Vite.svg'],['Astro','Astro.svg'],['JavaScript','JavaScript.svg'],
-        ['HTML5','HTML5.svg'],['CSS3','CSS3.svg'],['Vercel','Vercel.svg'],['Bootstrap','Bootstrap.svg'],
+        ['PHP','PHP.svg'],['Laravel','Laravel.svg'],['Livewire',null],['MySQL','MySQL.svg'],
+        ['JavaScript','JavaScript.svg'],['TypeScript','TypeScript.svg'],['React','React.svg'],['Next.js','NextJs.svg'],
+        ['Vue.js','Vue.svg'],['Nuxt.js','NuxtJs.svg'],['Astro','Astro.svg'],['Tailwind CSS','TailwindCSS.svg'],
+        ['Bootstrap','Bootstrap.svg'],['HTML5','HTML5.svg'],['CSS3','CSS3.svg'],['Vite','Vite.svg'],
+        ['Vercel','Vercel.svg'],['C#','CSharp.svg'],['Django','Django.svg'],['Figma','Figma.svg'],
       ] as [$name,$icon])
       <div class="group bg-white hover:bg-blue-50 rounded-xl p-3 text-center border border-gray-100 hover:border-blue-200 transition-all duration-200 cursor-default">
-        <img loading="lazy" decoding="async" src="techicons/{{ $icon }}" alt="{{ $name }}" class="w-7 h-7 mx-auto mb-1.5 group-hover:scale-110 transition-transform duration-200">
+        @if($icon)
+          <img loading="lazy" decoding="async" src="{{ asset('techicons/' . $icon) }}" alt="{{ $name }}" class="w-7 h-7 mx-auto mb-1.5 group-hover:scale-110 transition-transform duration-200">
+        @else
+          <div class="w-7 h-7 mx-auto mb-1.5 rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 text-white flex items-center justify-center text-[9px] font-black group-hover:scale-110 transition-transform duration-200">LW</div>
+        @endif
         <p class="text-[9px] font-semibold text-gray-400 group-hover:text-blue-500 transition-colors leading-tight">{{ $name }}</p>
       </div>
       @endforeach
@@ -686,7 +701,7 @@
       </a>
     </div>
     <div class="mt-10 flex flex-wrap justify-center gap-8 text-white/30 text-xs">
-      <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>contact@fintchweb.com</span>
+      <a href="mailto:judel@fintchweb.com" class="flex items-center gap-1.5 hover:text-white/60 transition-colors"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>judel@fintchweb.com</a>
       <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Réponse sous 24h</span>
       <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>Devis 100% gratuit</span>
     </div>
