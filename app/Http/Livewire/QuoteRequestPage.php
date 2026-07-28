@@ -31,7 +31,7 @@ class QuoteRequestPage extends Component
         'email' => 'required|email|max:200',
         'phone' => 'nullable|max:50',
         'company' => 'nullable|max:150',
-        'project_type' => 'required|in:site-vitrine,e-commerce,application-web,logiciel-metier,refonte,maintenance,camera-surveillance,autre',
+        'project_type' => 'required|in:site-vitrine,e-commerce,application-web,logiciel-metier,emails-professionnels,cloud-microsoft-365,refonte,maintenance,camera-surveillance,autre',
         'budget' => 'nullable|in:moins-500,500-1000,1000-3000,3000-5000,plus-5000,a-definir',
         'deadline' => 'nullable|in:urgent,1-mois,2-3-mois,flexible',
         'needs' => 'required|min:20|max:5000',

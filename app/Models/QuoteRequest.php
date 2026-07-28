@@ -93,6 +93,8 @@ class QuoteRequest extends Model
             'e-commerce' => 'Site e-commerce',
             'application-web' => 'Application web',
             'logiciel-metier' => 'Logiciel metier',
+            'emails-professionnels' => 'Emails professionnels',
+            'cloud-microsoft-365' => 'Cloud et Microsoft 365',
             'refonte' => 'Refonte de site',
             'maintenance' => 'Maintenance / support',
             'camera-surveillance' => 'Camera de surveillance',

@@ -41,6 +41,20 @@ class ServicePage extends Component
                 'budget' => '3000-5000',
                 'items' => ['Analyse des processus', 'Roles et permissions', 'Rapports et exports', 'Integrations API', 'Support evolutif'],
             ],
+            'emails-professionnels' => [
+                'title' => 'Emails professionnels',
+                'summary' => 'Adresses email privees et professionnelles rattachees au domaine de votre entreprise, comme nom@entreprise.com.',
+                'project_type' => 'emails-professionnels',
+                'budget' => 'a-definir',
+                'items' => ['Adresses email personnalisees', 'Configuration du nom de domaine', 'Securisation SPF, DKIM et DMARC', 'Webmail, mobile et ordinateur', 'Migration et assistance'],
+            ],
+            'cloud-microsoft-365' => [
+                'title' => 'Cloud et Microsoft 365',
+                'summary' => 'Des outils cloud bien configures pour centraliser vos documents, fluidifier la collaboration et securiser le travail de vos equipes.',
+                'project_type' => 'cloud-microsoft-365',
+                'budget' => 'a-definir',
+                'items' => ['Microsoft 365 et gestion des comptes', 'SharePoint et intranet collaboratif', 'Teams et espaces de travail', 'OneDrive et partage documentaire', 'Migration, securite et accompagnement'],
+            ],
             'cameras-surveillance' => [
                 'title' => 'Cameras de surveillance',
                 'summary' => 'Installation CCTV et IP avec acces distant, vision nocturne et configuration adaptee a vos locaux.',

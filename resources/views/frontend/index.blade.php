@@ -156,6 +156,13 @@
             'border'=> 'rgba(251,191,36,.35)',
             'color' => '#fcd34d',
           ],
+          [
+            'name'  => 'PRIFACO SARL',
+            'icon'  => 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21',
+            'bg'    => 'linear-gradient(135deg,rgba(6,182,212,.18),rgba(59,130,246,.18))',
+            'border'=> 'rgba(34,211,238,.35)',
+            'color' => '#67e8f9',
+          ],
         ];
       @endphp
 
@@ -202,7 +209,7 @@
       <p class="mt-3 text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Du design à la sécurité physique, chaque aspect de votre business est entre de bonnes mains.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
       @foreach([
         ['bg-blue-50','text-blue-600','bg-blue-600','Web Design UI/UX','Interfaces modernes pensées pour convertir et engager vos visiteurs.','M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42'],
         ['bg-violet-50','text-violet-600','bg-violet-600','Développement web','Apps et logiciels métier robustes, évolutifs et faciles à maintenir.','M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z'],
@@ -211,7 +218,8 @@
         ['bg-rose-50','text-rose-600','bg-rose-600','Cybersécurité','Audit, pentest, protection des données et conformité RGPD inclus.','M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z'],
         ['bg-indigo-50','text-indigo-600','bg-indigo-600','E-commerce','Boutiques performantes, sécurisées, intégrées à votre logistique.','M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z'],
         ['bg-teal-50','text-teal-600','bg-teal-600','Apps mobiles','iOS & Android natifs ou hybrides, performants et fluides.','M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'],
-        ['bg-emerald-50','text-emerald-600','bg-emerald-600','Hébergement & DevOps','Serveurs sécurisés, déploiement CI/CD et monitoring 24/7.','M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3'],
+        ['bg-cyan-50','text-cyan-600','bg-cyan-600','Emails professionnels','Adresses personnalisées liées à votre domaine, sécurisées et configurées sur tous vos appareils.','M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'],
+        ['bg-emerald-50','text-emerald-600','bg-emerald-600','Cloud & Microsoft 365','Microsoft 365, SharePoint, Teams, OneDrive et espaces cloud sécurisés pour vos équipes.','M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25m-4.5-13.5h16.5m-16.5 0H6a2.25 2.25 0 012.25 2.25v11.25m12-13.5v11.25A2.25 2.25 0 0118 16.5h-2.25m4.5-13.5H18a2.25 2.25 0 00-2.25 2.25v11.25m-7.5 0h7.5m-7.5 0A2.25 2.25 0 006 18.75V21h12v-2.25a2.25 2.25 0 00-2.25-2.25'],
         ['bg-amber-50','text-amber-600','bg-amber-500','Maintenance','Mises à jour, corrections et support technique continu.','M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z'],
       ] as [$bg,$tc,$hbg,$title,$desc,$path])
       <div class="group relative bg-gray-50 hover:bg-white rounded-2xl p-5 border border-transparent hover:border-gray-200 hover:shadow-lg transition-all duration-300 cursor-default">
@@ -229,13 +237,131 @@
             'Cybersécurité' => 'maintenance',
             'E-commerce' => 'ecommerce',
             'Apps mobiles' => 'logiciel-metier',
-            'Hébergement & DevOps' => 'maintenance',
+            'Emails professionnels' => 'emails-professionnels',
+            'Cloud & Microsoft 365' => 'cloud-microsoft-365',
             'Maintenance' => 'maintenance',
           ][$title] ?? 'site-web';
         @endphp
         <a href="/services/{{ $serviceSlug }}" class="mt-4 inline-flex text-xs font-semibold text-blue-600 hover:text-blue-700">Details du service</a>
       </div>
       @endforeach
+    </div>
+  </div>
+</section>
+
+{{-- ═══════════════════════════════════════════
+    CLOUD & MICROSOFT 365 — mise en avant
+═══════════════════════════════════════════ --}}
+<section class="bg-white pb-16 lg:pb-20">
+  <div class="mx-auto max-w-6xl px-5 sm:px-10 lg:px-8">
+    <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#07172f] via-[#0b3268] to-[#075ca8] text-white shadow-2xl shadow-blue-950/20">
+      <div class="absolute -top-28 -right-20 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 left-1/3 w-96 h-96 rounded-full bg-blue-500/20 blur-3xl pointer-events-none"></div>
+
+      <div class="relative grid lg:grid-cols-2 gap-10 items-center p-7 sm:p-10 lg:p-12">
+        <div>
+          <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 mb-6 backdrop-blur-sm">
+            <img src="{{ asset('assets/microsoft/microsoft.svg') }}" alt="" class="w-5 h-5">
+            <span class="text-xs font-bold tracking-wide">Solutions Cloud & Microsoft 365</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">
+            Votre entreprise,<br>
+            <span class="text-cyan-300">connectée partout.</span>
+          </h2>
+          <p class="!text-blue-100/80 text-sm sm:text-base leading-relaxed max-w-lg mb-7">
+            Centralisez vos documents, vos échanges et le travail de vos équipes dans un environnement Microsoft sécurisé, organisé et accessible sur tous vos appareils.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-3 mb-8">
+            @foreach([
+              ['Mise en place rapide', 'Configuration adaptée à votre organisation'],
+              ['Données sécurisées', 'Accès, sauvegardes et permissions maîtrisés'],
+              ['Travail collaboratif', 'Documents et équipes réunis au même endroit'],
+              ['Support de proximité', 'Formation et accompagnement après migration'],
+            ] as [$title,$text])
+            <div class="flex gap-3 rounded-xl border border-white/10 bg-white/[.07] p-3.5">
+              <div class="mt-0.5 w-5 h-5 rounded-full bg-cyan-400/20 text-cyan-300 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">{{ $title }}</p>
+                <p class="!text-blue-100/70 text-[11px] leading-relaxed mt-0.5">{{ $text }}</p>
+              </div>
+            </div>
+            @endforeach
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="/devis?project_type=cloud-microsoft-365&budget=a-definir" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-blue-800 hover:bg-cyan-50 transition-colors shadow-lg">
+              Demander une consultation
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/services/cloud-microsoft-365" class="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+              Découvrir le service
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative mx-auto max-w-md rounded-3xl border border-white/15 bg-white/[.09] p-4 sm:p-5 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between mb-5">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+              </div>
+              <span class="text-[10px] text-white/40 font-semibold tracking-wider uppercase">Espace entreprise</span>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 text-slate-800 shadow-xl">
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <div>
+                  <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Microsoft 365</p>
+                  <p class="font-bold text-lg mt-1">Votre espace de travail</p>
+                </div>
+                <div class="w-11 h-11 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center shadow-sm">
+                  <img src="{{ asset('assets/microsoft/microsoft.svg') }}" alt="Microsoft" class="w-6 h-6">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3">
+                @foreach([
+                  ['SharePoint','sharepoint.svg','Sites & documents','bg-teal-50'],
+                  ['Teams','teams.svg','Équipes & réunions','bg-violet-50'],
+                  ['OneDrive','onedrive.svg','Fichiers cloud','bg-blue-50'],
+                ] as [$name,$icon,$caption,$bg])
+                <div class="rounded-2xl {{ $bg }} border border-slate-100 p-3 text-center">
+                  <div class="h-10 flex items-center justify-center mb-2">
+                    <img src="{{ asset('assets/microsoft/' . $icon) }}" alt="{{ $name }}" class="w-9 h-9 object-contain">
+                  </div>
+                  <p class="text-[11px] font-bold text-slate-700">{{ $name }}</p>
+                  <p class="text-[9px] text-slate-400 mt-0.5 leading-tight">{{ $caption }}</p>
+                </div>
+                @endforeach
+              </div>
+
+              <div class="mt-4 rounded-xl border border-blue-100 bg-blue-50/70 p-3 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-slate-700">Configuration sécurisée</p>
+                  <p class="text-[9px] text-slate-400">Accès et permissions selon vos équipes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden sm:flex absolute -top-5 -right-3 items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-3 py-2 backdrop-blur-lg shadow-xl">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+            </span>
+            <span class="text-[10px] font-bold">Cloud opérationnel</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -582,7 +708,6 @@
     </div>
     <div class="grid md:grid-cols-2 gap-5">
       @foreach([
-        ['MY','from-blue-500 to-indigo-600','Moise Yamba','Promo du CS Berakha','csberakha.org','Nous avons été impressionnés par leur expertise. Leur équipe a répondu à nos besoins avec une solution efficace et fiable. Livraison dans les délais, accompagnement exemplaire.'],
         ['PD','from-violet-500 to-pink-600','Patrick DJAMBA','DG NEWCASTORM AGENCY','newcustomsagency.com','Deux ans de collaboration, et nous sommes constamment impressionnés par la qualité du service. Réactifs, pros et orientés résultats. On recommande sans hésiter.'],
         ['OC','from-fuchsia-500 to-purple-700','La direction','Orion Centre d\'Art','orioncentredart.com','Fintch Web a su traduire l\'identité culturelle de notre centre en un site à la fois élégant et fonctionnel. Galerie, événements, formations, podcasts : tout est mis en valeur avec fluidité. Un accompagnement sérieux, à l\'écoute, et livré dans les temps.'],
         ['CF','from-emerald-600 to-green-800','La direction','ConsForest Maniema','consforestmaniema.com','Fintch Web a créé un site à la hauteur de notre mission : sobre, élégant et efficace pour présenter notre travail de conservation forestière aux partenaires internationaux.'],

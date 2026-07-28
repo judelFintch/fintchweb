@@ -47,6 +47,8 @@
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">Web Design</a></li>
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">Développement web</a></li>
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">Applications mobiles</a></li>
+          <li><a href="/services/emails-professionnels" class="hover:text-white transition-colors duration-200">Emails professionnels</a></li>
+          <li><a href="/services/cloud-microsoft-365" class="hover:text-white transition-colors duration-200">Cloud & Microsoft 365</a></li>
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">Cybersécurité</a></li>
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">E-commerce</a></li>
           <li><a href="/#services" class="hover:text-white transition-colors duration-200">Caméras de surveillance</a></li>
